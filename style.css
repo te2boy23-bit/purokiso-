@@ -1,6 +1,7 @@
 @charset "UTF-8";
 p {
   color: #cc0000;
+  font-size: 100px;
 }
 img {
   width: 300px;
