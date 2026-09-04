@@ -2,3 +2,13 @@
 p {
   color: #cc0000;
 }
+img {
+  width: 300px;
+  height: auto;
+}
+ol {
+  color: #0000cc;
+}
+body {
+  background-color: #ffffcc;
+}
