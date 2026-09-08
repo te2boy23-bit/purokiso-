@@ -2,51 +2,75 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>HTMLテンプレート</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自己紹介 | 泉 哲平</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>
-      コーヒー豆の正体は「コーヒーチェリー」と呼ばれる、<br />サクランボに似た赤い実の種子
-      だ。
-    </p>
-    <h1>生産地で見るコーヒー豆ガイド</h1>
-    <h2>ブラジル</h2>
-    <h3>ブラジル サンタナ</h3>
-    <p>甘味とコクが強めで、酸味は控えめ。</p>
-    <h2>グァテマラ</h2>
-    <h3>グァテマラ ブエナビスタ RA</h3>
-    <p>フルーティで芳醇な香りと、しっかりとしたコクが味わえる。</p>
-    <h1>生産地で見るコーヒー豆ガイド(・)</h1>
-    <ul>
-      <li>ブラジル</li>
-      <li>グァテマラ</li>
-      <li>コロンビア</li>
-    </ul>
-    <h1>生産地で見るコーヒー豆ガイド(番号付き)</h1>
-    <ol>
-      <li>ブラジル</li>
-      <li>グァテマラ</li>
-      <li>コロンビア</li>
-    </ol>
-    <p>
-      <img src="images/coffee.jpg" alt="コーヒー" />
-      <img src="images/coffeeBean.png" alt="コーヒー豆" /><br />
-      imagesフォルダ直下のcoffee.jpgとcoffeeBean.pngを表示する例
-    </p>
-    <h2>こだわりコーヒー</h2>
-    <p>世界中から取り寄せた選りすぐりのコーヒーをご堪能ください。</p>
-    <p><a href="shop/plant.html">農園から選ぶ</a></p>
-    <p><a href="shop/variety.html">品種から選ぶ</a></p>
+    <!-- ページのヘッダー -->
+    <header>
+      <h1>My Profile</h1>
+    </header>
 
-    <h2>
-      もっと詳しく知りたいコーヒー豆
-      <p style="color: #cc0000">コーヒーチェリーのように赤い文字</p>
-    </h2>
-    <p>
-      <a href="https://en.wikipedia.org/wiki/Coffee_bean" target="_blank"
-        >コーヒー豆を wikiで調べる</a
-      >
-    </p>
+    <main class="container">
+      <!-- メインのプロフィールカード -->
+      <section class="card profile-card">
+        <!-- imagesフォルダ内の自己紹介画像 -->
+        <img
+          src="images/jikosyoukai.jpg"
+          alt="プロフィール写真"
+          class="profile-img"
+        />
+        <h2 class="name">
+          泉 哲平 <span class="ruby">（いずみ てっぺい）</span>
+        </h2>
+        <p class="tagline">プログラミング勉強中の専門学生です！</p>
+      </section>
+
+      <!-- 基本情報セクション -->
+      <section class="card">
+        <h3>📌 基本情報</h3>
+        <ul class="profile-list">
+          <li><span class="label">名前：</span>泉 哲平</li>
+          <li><span class="label">年齢：</span>19歳</li>
+          <li><span class="label">出身地：</span>東京都</li>
+        </ul>
+      </section>
+
+      <!-- 趣味・好きなことセクション -->
+      <section class="card">
+        <h3>趣味・好きなこと</h3>
+        <div class="hobbies-grid">
+          <div class="hobby-item">
+            <h4>運動</h4>
+            <p>サイクリングやバスケなどの球技が好きです。</p>
+          </div>
+          <div class="hobby-item">
+            <h4>お出かけ</h4>
+            <p>
+              新しい場所を巡ったり、美味しいものを食べたりするのが好きです。
+            </p>
+          </div>
+          <div class="hobby-item">
+            <h4>映画鑑賞</h4>
+            <p>マーベルやスタウォーズが好きです。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 目標・学んでいることセクション -->
+      <section class="card">
+        <h3>今がんばっていること・目標</h3>
+        <p>
+          授業「プログラミング基礎」でHTMLやCSSの基本を学んでいます。<br />
+          自分でWebサイトを思い通りにデザインしたり、JavaScriptを使って動きのある楽しいページを作れるようになりたいです！
+        </p>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <p>&copy; 2026 Teppei Izumi. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>

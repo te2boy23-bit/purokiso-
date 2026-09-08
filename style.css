@@ -1,15 +1,204 @@
 @charset "UTF-8";
-p {
-  color: #cc0000;
-  font-size: 100px;
+
+/* ===================================================
+   全体設定（リセットと基本スタイル）
+   =================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-img {
-  width: 300px;
-  height: auto;
-}
-ol {
-  color: #0000cc;
-}
+
 body {
-  background-color: #ffffcc;
+  font-family:
+    "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
+  line-height: 1.8;
+  color: #333333;
+  background-color: #f4f7f9; /* ページ全体の背景色（薄いグレー） */
+}
+
+/* ===================================================
+   ヘッダー
+   =================================================== */
+header {
+  background: linear-gradient(
+    135deg,
+    #2b5876,
+    #4e4376
+  ); /* おしゃれなグラデーション背景 */
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+/* ===================================================
+   メインコンテンツ（中央寄せコンテナ）
+   =================================================== */
+.container {
+  max-width: 800px; /* 横幅の最大値 */
+  margin: 0 auto; /* 画面中央に配置 */
+  padding: 30px 20px;
+}
+
+/* 白いカード枠の共通スタイル */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px; /* 角を丸くする */
+  padding: 28px 32px;
+  margin-bottom: 24px; /* カード同士の間隔 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ほんのり影をつける */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* カードの上にマウスを乗せたときのアニメーション */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* セクション見出し (h3) */
+.card h3 {
+  font-size: 1.25rem;
+  color: #2b5876;
+  border-bottom: 2px solid #edf2f7; /* 見出しの下線 */
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+/* ===================================================
+   プロフィールカード（トップ）
+   =================================================== */
+.profile-card {
+  text-align: center;
+  padding-top: 36px;
+}
+
+/* プロフィール写真 */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* 正円に切り抜く */
+  object-fit: cover; /* 画像の比率を崩さず収める */
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 16px;
+}
+
+/* 名前 */
+.name {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+/* ふりがな */
+.ruby {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: normal;
+}
+
+/* ひとこと */
+.tagline {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+/* ===================================================
+   基本情報リスト
+   =================================================== */
+.profile-list {
+  list-style: none; /* リストの「・」を非表示 */
+}
+
+.profile-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e2e8f0; /* 点線で区切る */
+  font-size: 1rem;
+}
+
+.profile-list li:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: bold;
+  color: #2b5876;
+  display: inline-block;
+  width: 100px; /* 項目ラベルの幅を揃える */
+}
+
+/* ===================================================
+   趣味（グリッド並び）
+   =================================================== */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* スマホでも自動折り返し */
+  gap: 16px;
+}
+
+.hobby-item {
+  background-color: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #4e4376; /* 左端にアクセントカラー */
+}
+
+.hobby-item h4 {
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.hobby-item p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ===================================================
+   リンク・SNSボタン
+   =================================================== */
+.links-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.links-list a {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #2b5876;
+  color: #ffffff;
+  text-decoration: none; /* 下線を消す */
+  border-radius: 20px; /* カプセル型ボタン */
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.links-list a:hover {
+  background-color: #1d3b50; /* マウスを乗せたときに少し濃くする */
+}
+
+/* ===================================================
+   フッター
+   =================================================== */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.85rem;
+  color: #94a3b8;
 }
