@@ -3,452 +3,625 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>泉 哲平 (Teppei Izumi) | Portfolio</title>
-    <!-- Google Fonts（視認性とデザイン性に優れたフォント） -->
+    <title>THE TEPPEI TIMES | 泉 哲平 新聞</title>
+    <!-- Google Fonts（新聞らしい格調高い明朝体 & セリフ体） -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,700&family=Shippori+Mincho:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- CSSのみで固定・すりガラス化するナビゲーションバー -->
-    <header class="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">
-          <span class="logo-mark">&lt;/&gt;</span>
-          <span class="logo-text">Teppei.dev</span>
-        </a>
-        <nav class="nav-menu">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#hobbies" class="nav-link">Hobbies</a>
-          <a href="#timeline" class="nav-link">Timeline</a>
-          <a href="#works" class="nav-link">Works</a>
+    <!-- 新聞全体を包むペーパーコンテナ -->
+    <div class="newspaper-page">
+      <!-- 1. 新聞最上部：耳情報バー（日付・号数・天候・特別号） -->
+      <div class="newspaper-topbar">
+        <div class="topbar-item topbar-date">2026年（令和8年）9月 発行</div>
+        <div class="topbar-item topbar-issue">第 1 号（特別創刊号）</div>
+        <div class="topbar-item topbar-weather">東京 天候：快晴</div>
+        <div class="topbar-item topbar-price">定価：閲覧無料</div>
+        <div class="topbar-item topbar-edition">
+          プログラミング基礎 提出紙面
+        </div>
+      </div>
+
+      <!-- 2. 新聞題字・ヘッドライン（Masthead） -->
+      <header class="newspaper-masthead">
+        <div class="masthead-inner">
+          <div class="masthead-left">
+            <span class="masthead-badge">独占取材</span>
+            <p class="masthead-tagline">
+              日々の学びと創造の最前線を伝える<br />IT専門学生・泉哲平のオフィシャル紙面
+            </p>
+          </div>
+
+          <div class="masthead-center">
+            <h1 class="newspaper-title-en">THE TEPPEI TIMES</h1>
+            <div class="newspaper-title-jp">泉 哲平 新聞</div>
+            <p class="newspaper-motto">
+              ―「継続は力なり」 一歩ずつ着実に成長するWebクリエイターの歩み ―
+            </p>
+          </div>
+
+          <div class="masthead-right">
+            <div class="stamp-box stamp-special">
+              <span class="stamp-text">特報号外</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 紙面ナビゲーション（新聞の各面インデックス） -->
+        <nav class="newspaper-nav">
+          <a href="#front-page" class="nav-btn">［一面］トップ特報</a>
+          <a href="#profile-section" class="nav-btn">［二面］人物略歴</a>
+          <a href="#timeline-section" class="nav-btn">［三面］歩み・社会</a>
+          <a href="#skills-section" class="nav-btn">［四面］技術レポート</a>
+          <a href="#culture-section" class="nav-btn">［五面］文化・横顔</a>
+          <a href="#interview-section" class="nav-btn">［六面］独占会見</a>
+          <a href="#works-section" class="nav-btn nav-btn-highlight"
+            >［号外］制作物特報</a
+          >
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <!-- ヒーローセクション -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <!-- ステータスインジケーター -->
-        <div class="status-indicator">
-          <span>Webプログラミング学習中</span>
-        </div>
-
-        <!-- アバター写真 -->
-        <div class="avatar-hero">
-          <div class="avatar-ring">
-            <img
-              src="images/jikosyoukai.jpg"
-              alt="泉 哲平のプロフィール写真"
-              class="avatar-img"
-            />
+      <!-- 3. 【一面】トップ特報（Lead Story） -->
+      <main class="newspaper-main">
+        <section id="front-page" class="news-section lead-story-section">
+          <div class="section-kicker">
+            <span class="kicker-tag">一面トップ</span>
+            <span class="kicker-sub">SPECIAL REPORT</span>
           </div>
-        </div>
 
-        <h1 class="hero-title">
-          泉 哲平
-          <span class="hero-en">Teppei Izumi</span>
-        </h1>
-
-        <!-- CSSだけで動くタイピング風テキスト -->
-        <div class="typewriter-box">
-          <span class="typewriter-text">IT専門学生 / Webクリエイター志望</span>
-        </div>
-
-        <p class="hero-desc">
-          都内のIT専門学校でプログラミングとWeb制作を学んでいます。<br />
-          シンプルで美しく、使いやすいWebサイト作りを目指して日々コードを書いています。
-        </p>
-
-        <div class="hero-actions">
-          <a href="#about" class="btn btn-primary">プロフィールを見る</a>
-          <a href="#works" class="btn btn-secondary">制作した作品を見る</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- メインコンテンツコンテナ -->
-    <main class="main-container">
-      <!-- 1. 基本プロフィール (About) -->
-      <section id="about" class="section-block">
-        <div class="section-header">
-          <span class="section-tag">WHO I AM</span>
-          <h2 class="section-heading">基本プロフィール</h2>
-        </div>
-
-        <!-- クイック統計カード -->
-        <div class="stats-row">
-          <div class="stat-card">
-            <span class="stat-num">19</span>
-            <span class="stat-label">年齢（歳）</span>
+          <!-- 新聞の大見出し -->
+          <div class="headline-container">
+            <h2 class="main-headline">泉哲平氏、Web制作の世界へ本格参入</h2>
+            <div class="sub-headline">
+              都内IT専門学校で「プログラミング基礎」に没頭 ――
+              独自ドメインWebアプリやゲーム、公式HPを続々公開
+            </div>
           </div>
-          <div class="stat-card">
-            <span class="stat-num">1st</span>
-            <span class="stat-label">専門学生（1年目）</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">Tokyo</span>
-            <span class="stat-label">出身地（東京都）</span>
-          </div>
-        </div>
 
-        <!-- 詳細情報テーブル -->
-        <div class="content-card">
-          <table class="data-table">
-            <tbody>
-              <tr>
-                <th>氏名</th>
-                <td>泉 哲平（いずみ てっぺい）</td>
-              </tr>
-              <tr>
-                <th>所属</th>
-                <td>IT・情報システム系専門学校</td>
-              </tr>
-              <tr>
-                <th>専攻分野</th>
-                <td>Webデザイン / フロントエンド基礎（HTML・CSS）</td>
-              </tr>
-              <tr>
-                <th>座右の銘</th>
-                <td>「継続は力なり」 一歩ずつ着実に成長すること</td>
-              </tr>
-              <tr>
-                <th>好きな季節</th>
-                <td>秋（涼しくてサイクリングに最適な季節）</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+          <!-- 一面トップの2カラム段組み記事 -->
+          <div class="lead-story-grid">
+            <!-- 左カラム：リード記事本文 -->
+            <article class="lead-article">
+              <p class="article-lead">
+                【東京】都内のIT専門学校で情報技術を学ぶ泉哲平氏（19）が、Webクリエイターを目指しフロントエンド技術の本格習得に取り組んでいる。授業「プログラミング基礎」での学習を起点に、HTML5・CSS3の構造設計や実践的なレイアウト技術を意欲的に吸収。独自ドメインを取得したブラウザゲームや共有型ライフマネジメントアプリの一般公開、大規模学校フェスティバルの公式ホームページ制作など、早くも実社会に通用する発信を行っており、今後の動向に注目が集まっている。
+              </p>
 
-      <!-- 2. 学習中のスキル (Skills) -->
-      <section id="skills" class="section-block">
-        <div class="section-header">
-          <span class="section-tag">TECH STACK</span>
-          <h2 class="section-heading">学習中のスキル &amp; 目標</h2>
-          <p class="section-subtext">
-            授業「プログラミング基礎」を中心に、Web制作技術を習得しています。
-          </p>
-        </div>
-
-        <div class="content-card">
-          <!-- スキルバー群 -->
-          <div class="skills-grid">
-            <div class="skill-row">
-              <div class="skill-info">
-                <span class="skill-title">HTML5（文書構造・タグ設計）</span>
-                <span class="skill-percent">75%</span>
+              <div class="article-body-columns">
+                <p>
+                  泉氏は「シンプルで見やすく、誰にとっても使いやすいスマートなWebサイトを作ることが目標」と力強く語る。ただ教科書のコードを書き写すにとどまらず、自ら企画・デザインを手がけ、インターネット上に実際に届ける姿勢を貫いている。
+                </p>
+                <p>
+                  同氏の最大の武器は「継続は力なり」という実直な信条だ。日々の課題制作と個人開発を着実に積み重ねることで、技術の基礎体力を確実に向上させている。現在はJavaScriptの応用にも学習の幅を広げており、次世代のWeb制作を担う存在として成長を続けている。
+                </p>
               </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-html"></div>
+
+              <!-- 社説・短評コラム枠 -->
+              <div class="editorial-box">
+                <div class="editorial-label">
+                  【記者短評】確かな基礎が生む発信力
+                </div>
+                <p class="editorial-text">
+                  専門学校1年目にして、すでに独自ドメインサイトを運用し、チームの公式Web制作を担う実行力は目を見張るものがある。派手な技巧に逃げず、まずはHTML・CSSの文書構造と画面設計を堅牢に固めるアプローチは、将来のエンジニアリングの強靭な土台となるに違いない。（担当記者）
+                </p>
+              </div>
+            </article>
+
+            <!-- 右カラム：写真・キャプション・略歴囲み -->
+            <aside class="lead-sidebar">
+              <!-- 写真報道枠 -->
+              <figure class="news-photo-frame">
+                <div class="photo-wrapper">
+                  <img
+                    src="images/jikosyoukai.jpg"
+                    alt="取材に応じる泉哲平氏の近影"
+                    class="news-photo"
+                  />
+                </div>
+                <figcaption class="photo-caption">
+                  ▲
+                  <strong>【近影】</strong>
+                  Web制作への挑戦と学習への熱意を語る泉哲平氏（都内IT専門学校にて撮影）
+                </figcaption>
+              </figure>
+
+              <!-- 人物略歴（囲み記事） -->
+              <div id="profile-section" class="profile-box">
+                <div class="box-header">
+                  <span class="box-badge">人物略歴</span>
+                  <h3 class="box-title">泉 哲平（いずみ てっぺい）</h3>
+                </div>
+
+                <div class="profile-meta-grid">
+                  <div class="meta-item">
+                    <span class="meta-label">現年齢</span>
+                    <span class="meta-value">19歳</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">年次</span>
+                    <span class="meta-value">専門学校 1年</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">出身地</span>
+                    <span class="meta-value">東京都</span>
+                  </div>
+                </div>
+
+                <table class="news-data-table">
+                  <tbody>
+                    <tr>
+                      <th>所属機関</th>
+                      <td>IT・情報システム系専門学校</td>
+                    </tr>
+                    <tr>
+                      <th>専攻分野</th>
+                      <td>Webデザイン / フロントエンド基礎（HTML5・CSS3）</td>
+                    </tr>
+                    <tr>
+                      <th>座右の銘</th>
+                      <td>「継続は力なり」 一歩ずつ着実に成長すること</td>
+                    </tr>
+                    <tr>
+                      <th>好きな季節</th>
+                      <td>秋（涼風が吹きサイクリングに最適な季節）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <div class="newspaper-divider"></div>
+
+        <!-- 4. 【二面】歩み・社会面（Timeline） -->
+        <section id="timeline-section" class="news-section">
+          <div class="section-kicker">
+            <span class="kicker-tag">二面 社会・歩み</span>
+            <span class="kicker-sub">CHRONICLE</span>
+          </div>
+
+          <h3 class="sub-section-headline">
+            【追跡・経歴】泉哲平氏の歩み ―― 入学から自作公開、アプリ開発へ
+          </h3>
+
+          <div class="chronicle-timeline">
+            <!-- 年表項目 1 -->
+            <div class="chronicle-row">
+              <div class="chronicle-date">
+                <span class="date-year">2024年</span>
+                <span class="date-month">4月</span>
+              </div>
+              <div class="chronicle-marker"></div>
+              <div class="chronicle-content">
+                <h4 class="chronicle-title">
+                  IT専門学校へ入学・プログラミングとの出会い
+                </h4>
+                <p class="chronicle-desc">
+                  情報技術の無限の可能性に惹かれ、都内IT専門学校への進学を決意。Web制作の根幹となるマークアップ言語とスタイリングの学習をゼロから本格始動した。
+                </p>
               </div>
             </div>
 
-            <div class="skill-row">
-              <div class="skill-info">
-                <span class="skill-title"
-                  >CSS3（Flexbox / Grid / アニメーション）</span
+            <!-- 年表項目 2 -->
+            <div class="chronicle-row chronicle-row-current">
+              <div class="chronicle-date">
+                <span class="date-year">現在</span>
+                <span class="date-status">進行中</span>
+              </div>
+              <div class="chronicle-marker marker-current"></div>
+              <div class="chronicle-content">
+                <h4 class="chronicle-title">
+                  HTML5/CSS3実践習得 &amp; 独自ドメイン作品公開
+                </h4>
+                <p class="chronicle-desc">
+                  授業「プログラミング基礎」においてレスポンシブWeb設計や現代的なUI設計を徹底追求。学校フェス公式HPの制作に加え、独自ドメインを取得したWebゲームや共有型ライフマネジメントWebアプリを自ら開発・公開するに至る。
+                </p>
+              </div>
+            </div>
+
+            <!-- 年表項目 3 -->
+            <div class="chronicle-row">
+              <div class="chronicle-date">
+                <span class="date-year">NEXT</span>
+                <span class="date-status">展望</span>
+              </div>
+              <div class="chronicle-marker marker-future"></div>
+              <div class="chronicle-content">
+                <h4 class="chronicle-title">
+                  JavaScriptの高度活用 &amp; Webアプリケーション創出
+                </h4>
+                <p class="chronicle-desc">
+                  動的なユーザー体験と実用性を兼ね備えたWebアプリケーションの開発に挑む。ユーザー視点に立ったインタラクティブなプロダクト開発を計画中。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="newspaper-divider"></div>
+
+        <!-- 5. 【三面】技術面（Skills & Tech Report） -->
+        <section id="skills-section" class="news-section">
+          <div class="section-kicker">
+            <span class="kicker-tag">三面 産業・科学技術</span>
+            <span class="kicker-sub">TECH REPORT</span>
+          </div>
+
+          <h3 class="sub-section-headline">
+            【技術調査】フロントエンド技術の習得状況動向を徹底分析
+          </h3>
+
+          <div class="tech-report-grid">
+            <!-- 左側：技術進捗インジケーター（新聞統計グラフ風） -->
+            <div class="tech-chart-box">
+              <div class="chart-header">
+                <span class="chart-title">主要技術 指標データ</span>
+                <span class="chart-note"
+                  >※授業課題および自主開発に基づく到達度</span
                 >
-                <span class="skill-percent">65%</span>
               </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-css"></div>
+
+              <div class="newspaper-metric-list">
+                <div class="metric-item">
+                  <div class="metric-info">
+                    <span class="metric-name"
+                      >HTML5（文書構造化・セマンティック設計）</span
+                    >
+                    <span class="metric-score">75%</span>
+                  </div>
+                  <div class="metric-track">
+                    <div class="metric-bar bar-html"></div>
+                  </div>
+                </div>
+
+                <div class="metric-item">
+                  <div class="metric-info">
+                    <span class="metric-name"
+                      >CSS3（Flexbox / Grid / レスポンシブ設計）</span
+                    >
+                    <span class="metric-score">65%</span>
+                  </div>
+                  <div class="metric-track">
+                    <div class="metric-bar bar-css"></div>
+                  </div>
+                </div>
+
+                <div class="metric-item">
+                  <div class="metric-info">
+                    <span class="metric-name"
+                      >JavaScript（Web制作 &amp; ゲームロジック）</span
+                    >
+                    <span class="metric-score">40%</span>
+                  </div>
+                  <div class="metric-track">
+                    <div class="metric-bar bar-js"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 開発環境・ツール群 -->
+              <div class="tools-bulletin">
+                <span class="bulletin-label">【常用開発ツール・環境】</span>
+                <div class="bulletin-tags">
+                  <span class="paper-tag">VS Code</span>
+                  <span class="paper-tag">Google Chrome DevTools</span>
+                  <span class="paper-tag">Git / GitHub</span>
+                  <span class="paper-tag">Vercel</span>
+                  <span class="paper-tag">Responsive Layout</span>
+                </div>
               </div>
             </div>
 
-            <div class="skill-row">
-              <div class="skill-info">
-                <span class="skill-title"
-                  >JavaScript（Web制作 &amp; ゲーム開発）</span
-                >
-                <span class="skill-percent">40%</span>
+            <!-- 右側：今後の目標・記者解説 -->
+            <div class="tech-insight-box">
+              <div class="insight-badge">展望コラム</div>
+              <h4 class="insight-title">
+                「形骸化しない実用的なコーディングを」
+              </h4>
+              <p class="insight-text">
+                「見た目を整えるだけでなく、コードの保守性やアクセシビリティを意識したマークアップができるようになりたい」と語る泉氏。現在はプログラミング基礎の講義を足がかりに、複雑なUIをCSSのみで美しく構築する表現力を磨いている。
+              </p>
+              <p class="insight-text">
+                今後はJavaScriptを用いたデータ連携やAPI活用にも挑戦し、単なる静的Webサイトにとどまらない、人々の生活に役立つ実用ツールの開発を目指す。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="newspaper-divider"></div>
+
+        <!-- 6. 【四面】文化・生活面（Hobbies） -->
+        <section id="culture-section" class="news-section">
+          <div class="section-kicker">
+            <span class="kicker-tag">四面 文化・生活</span>
+            <span class="kicker-sub">CULTURE &amp; LIFESTYLE</span>
+          </div>
+
+          <h3 class="sub-section-headline">
+            【休日の横顔】記者が迫るリフレッシュ術 ―― 運動・街歩き・映画鑑賞
+          </h3>
+
+          <div class="culture-columns-grid">
+            <!-- 趣味コラム1 -->
+            <article class="culture-card">
+              <div class="culture-num-badge">第壱編</div>
+              <h4 class="culture-card-title">運動・スポーツ</h4>
+              <p class="culture-card-subtitle">風を切るサイクリングと球技</p>
+              <p class="culture-card-desc">
+                休日は愛用のクロスバイクに跨がり、遠方までペダルを漕ぎ出して気分を爽快にリセットする。バスケットボールなどの球技にも親しみ、体を動かすことで日々の学習への集中力を養っている。
+              </p>
+              <div class="culture-keywords">
+                <span class="kw-tag">#サイクリング</span>
+                <span class="kw-tag">#バスケ</span>
+                <span class="kw-tag">#球技全般</span>
               </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-js"></div>
+            </article>
+
+            <!-- 趣味コラム2 -->
+            <article class="culture-card">
+              <div class="culture-num-badge">第弐編</div>
+              <h4 class="culture-card-title">お出かけ・街巡り</h4>
+              <p class="culture-card-subtitle">未知のカフェと美味を訪ねて</p>
+              <p class="culture-card-desc">
+                まだ見ぬ街の路地や落ち着いたカフェ、隠れたご当地グルメを探して散策するのが週末の楽しみ。気になった飲食店があれば迷わず暖簾をくぐる行動力は、Web制作の探求心にも通じている。
+              </p>
+              <div class="culture-keywords">
+                <span class="kw-tag">#街歩き</span>
+                <span class="kw-tag">#カフェ巡り</span>
+                <span class="kw-tag">#グルメ探訪</span>
+              </div>
+            </article>
+
+            <!-- 趣味コラム3 -->
+            <article class="culture-card">
+              <div class="culture-num-badge">第参編</div>
+              <h4 class="culture-card-title">映画鑑賞</h4>
+              <p class="culture-card-subtitle">緻密な世界観と大迫力SF</p>
+              <p class="culture-card-desc">
+                「マーベル（MCU）」シリーズや「スター・ウォーズ」など、緻密な設定と壮大なスケールで描かれるSF・アクション作品を熱心に鑑賞。圧倒的なクリエイティビティに触れ、豊かな感性を刺激されている。
+              </p>
+              <div class="culture-keywords">
+                <span class="kw-tag">#MCU / MARVEL</span>
+                <span class="kw-tag">#Star Wars</span>
+                <span class="kw-tag">#SFアクション</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="newspaper-divider"></div>
+
+        <!-- 7. 【五面】独占インタビュー（Q&A） -->
+        <section id="interview-section" class="news-section">
+          <div class="section-kicker">
+            <span class="kicker-tag">五面 特別会見</span>
+            <span class="kicker-sub">EXCLUSIVE INTERVIEW</span>
+          </div>
+
+          <h3 class="sub-section-headline">
+            【独占直撃】泉哲平氏に迫る一問一答 ―― 記者が訊く3つの質問
+          </h3>
+
+          <div class="interview-dialogue-list">
+            <!-- 質問 1 -->
+            <div class="interview-block">
+              <div class="dialogue-q">
+                <span class="speaker-label speaker-reporter">問</span>
+                <p class="speech-text speech-q">
+                  休日は普段どのように過ごされることが多いですか？
+                </p>
+              </div>
+              <div class="dialogue-a">
+                <span class="speaker-label speaker-guest">答</span>
+                <p class="speech-text speech-a">
+                  天気の良い日は自転車で少し遠くまで出かけてお気に入りのカフェに行ったり、家で映画を一気見してのんびりと心身を休めています。動くときと休むときのメリハリを大切にしています。
+                </p>
+              </div>
+            </div>
+
+            <!-- 質問 2 -->
+            <div class="interview-block">
+              <div class="dialogue-q">
+                <span class="speaker-label speaker-reporter">問</span>
+                <p class="speech-text speech-q">
+                  一番好きな食べ物や好物を教えてください。
+                </p>
+              </div>
+              <div class="dialogue-a">
+                <span class="speaker-label speaker-guest">答</span>
+                <p class="speech-text speech-a">
+                  王道のラーメンやハンバーグが大好きです。また、お出かけ先で見つけた美味しいご当地ご飯や、初めて出会う味を開拓することも欠かせない楽しみの一つです。
+                </p>
+              </div>
+            </div>
+
+            <!-- 質問 3 -->
+            <div class="interview-block">
+              <div class="dialogue-q">
+                <span class="speaker-label speaker-reporter">問</span>
+                <p class="speech-text speech-q">
+                  クリエイターとして、今後どのようなWebサイトを作っていきたいですか？
+                </p>
+              </div>
+              <div class="dialogue-a">
+                <span class="speaker-label speaker-guest">答</span>
+                <p class="speech-text speech-a">
+                  見た目がシンプルで美しいことはもちろん、訪れた誰にとっても使いやすく、迷わずに目的を達成できるスマートなWebサイトを作れるクリエイターになりたいです。
+                </p>
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- ツール・環境タグ -->
-          <div class="tools-wrap">
-            <span class="tools-heading">使用ツール・環境：</span>
-            <div class="tool-tags">
-              <span class="tool-tag">VS Code</span>
-              <span class="tool-tag">Google Chrome DevTools</span>
-              <span class="tool-tag">Git / GitHub</span>
-              <span class="tool-tag">Vercel</span>
-              <span class="tool-tag">Responsive Design</span>
+        <div class="newspaper-divider"></div>
+
+        <!-- 8. 【特報・号外】制作物・作品面（Works） -->
+        <section id="works-section" class="news-section extra-edition-section">
+          <div class="extra-header-banner">
+            <div class="extra-stamp">号外特報</div>
+            <div class="extra-heading-wrap">
+              <h3 class="extra-main-title">自作Web作品を全世界へ公開中</h3>
+              <p class="extra-sub-title">
+                公式HP制作から本格ブラウザ潜入捜査ゲームまで ――
+                泉哲平氏の制作実績を総力特集
+              </p>
             </div>
           </div>
 
-          <!-- 目標ハイライトボックス -->
-          <div class="target-box">
-            <div class="target-icon">GOAL</div>
-            <div class="target-body">
-              <h4>これからのロードマップと挑戦</h4>
+          <div class="extra-articles-grid">
+            <!-- 作品記事 1: 赤団 豹牙HP -->
+            <article class="extra-card card-akadan">
+              <div class="card-masthead">
+                <span class="card-genre">WEB SITE 特集</span>
+                <span class="card-vol">PROJECT #01</span>
+              </div>
+
+              <div class="card-headline-banner banner-akadan-bg">
+                <span class="banner-monogram">AKADAN</span>
+                <h4 class="card-headline-text">
+                  三フェス 赤団 豹牙 公式Webサイト
+                </h4>
+              </div>
+
+              <div class="card-inner-body">
+                <p class="card-lead-text">
+                  三幸学園フェスティバル（３フェス）赤団の公式ホームページ。副団長としてチームを牽引しながら、お知らせ配信、演舞動画、競技案内、団員紹介など多彩なコンテンツを網羅した本格的Webサイトを構築。
+                </p>
+                <div class="card-spec-tags">
+                  <span class="spec-tag">#公式Webサイト</span>
+                  <span class="spec-tag">#三フェス赤団</span>
+                  <span class="spec-tag">#副団長制作</span>
+                  <span class="spec-tag">#Vercel公開</span>
+                </div>
+                <div class="card-link-actions">
+                  <a
+                    href="https://akadan.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="paper-action-btn btn-akadan"
+                  >
+                    ［紙面直通］赤団 公式サイトを見る
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 作品記事 2: cyber-bait.com（ハッキングゲーム） -->
+            <article class="extra-card card-game">
+              <div class="card-masthead">
+                <span class="card-genre">WEB GAME 特集</span>
+                <span class="card-vol">PROJECT #02</span>
+              </div>
+
+              <div class="card-headline-banner banner-game-bg">
+                <span class="banner-monogram">CYBER BAIT</span>
+                <h4 class="card-headline-text">
+                  詐欺師を騙し返せ！エージェント・コード
+                </h4>
+              </div>
+
+              <div class="card-inner-body">
+                <p class="card-lead-text">
+                  悪質な詐欺師をハッキングして騙し返す、ブラウザで遊べる潜入捜査サスペンス・シミュレーションゲーム。独自ドメイン（cyber-bait.com）を取得し、緊迫感あふれるUIとストーリー演出を自ら設計・実装。
+                </p>
+                <div class="card-spec-tags">
+                  <span class="spec-tag">#独自ドメイン</span>
+                  <span class="spec-tag">#cyber-bait.com</span>
+                  <span class="spec-tag">#Webゲーム</span>
+                  <span class="spec-tag">#JavaScript開発</span>
+                </div>
+                <div class="card-link-actions">
+                  <a
+                    href="https://cyber-bait.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="paper-action-btn btn-game"
+                  >
+                    ［紙面直通］ゲームをプレイ（cyber-bait.com）
+                  </a>
+                  <a
+                    href="https://first-game-n0jnz8pcc-tepe3.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="paper-action-sub-btn"
+                  >
+                    開発版（Vercel）
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 作品記事 3: plan-wallet.com（多機能共有ライフマネージャー） -->
+            <article class="extra-card card-wallet">
+              <div class="card-masthead">
+                <span class="card-genre">WEB APP 特集</span>
+                <span class="card-vol">PROJECT #03</span>
+              </div>
+
+              <div class="card-headline-banner banner-wallet-bg">
+                <span class="banner-monogram">WALLET</span>
+                <h4 class="card-headline-text">
+                  多機能共有ライフマネージャー Plan-Wallet
+                </h4>
+              </div>
+
+              <div class="card-inner-body">
+                <p class="card-lead-text">
+                  家計簿機能にとどまらず、ToDoリスト、メモ帳、リアルタイムチャット、貯金の共同管理など日々の生活と目標をトータルサポートするWebアプリケーション。複数人での情報・目標共有機能を備え、独自ドメイン（plan-wallet.com）を取得して本格運用・公開中。
+                </p>
+                <div class="card-spec-tags">
+                  <span class="spec-tag">#独自ドメイン</span>
+                  <span class="spec-tag">#plan-wallet.com</span>
+                  <span class="spec-tag">#家計簿＆貯金共有</span>
+                  <span class="spec-tag">#ToDo＆メモ</span>
+                  <span class="spec-tag">#チャット機能</span>
+                  <span class="spec-tag">#Webアプリ</span>
+                </div>
+                <div class="card-link-actions">
+                  <a
+                    href="https://plan-wallet.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="paper-action-btn btn-wallet"
+                  >
+                    ［紙面直通］Plan-Wallet を開く（plan-wallet.com）
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- 9. 新聞奥付・フッター（Colophon） -->
+      <footer class="newspaper-colophon">
+        <div class="colophon-inner">
+          <div class="colophon-box">
+            <h4 class="colophon-title">【泉新聞社 発行奥付】</h4>
+            <div class="colophon-details">
+              <p>題字・紙面発行所：泉新聞社 編集局特報部</p>
+              <p>編集発行人：泉 哲平（IT専門学生）</p>
+              <p>特別刊行目的：専門学校「プログラミング基礎」授業課題制作</p>
               <p>
-                HTMLとCSSで思い通りのデザインを作れるようになることが現在の目標です。<br />
-                今後はJavaScriptを学んで、動的で実用的なWebサービスやゲームを自分で作れるクリエイターを目指しています。
+                技術仕様：完全ピュア HTML5 &amp; CSS3 仕様（JavaScript不使用）
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- 3. 趣味 & 好きなこと (Hobbies) -->
-      <section id="hobbies" class="section-block">
-        <div class="section-header">
-          <span class="section-tag">PASSION</span>
-          <h2 class="section-heading">趣味・好きなこと</h2>
-          <p class="section-subtext">
-            休日のリフレッシュ方法や関心のある分野です。
-          </p>
-        </div>
-
-        <div class="cards-grid">
-          <!-- 趣味カード1 -->
-          <div class="interactive-card">
-            <div class="card-icon-wrapper">
-              <span class="card-num">01</span>
-            </div>
-            <h3 class="card-title">運動・スポーツ</h3>
-            <p class="card-text">
-              休日はクロスバイクで風を感じながら遠くまで出かけて気分をリフレッシュしています。バスケなどの球技も好きで、体を動かすことが活力になっています。
+          <div class="colophon-copyright">
+            <p class="copyright-text">
+              &copy; 2026 THE TEPPEI TIMES / Teppei Izumi. All Rights Reserved.
             </p>
-            <div class="badge-cluster">
-              <span class="mini-badge">#サイクリング</span>
-              <span class="mini-badge">#バスケ</span>
-              <span class="mini-badge">#球技</span>
-            </div>
-          </div>
-
-          <!-- 趣味カード2 -->
-          <div class="interactive-card">
-            <div class="card-icon-wrapper">
-              <span class="card-num">02</span>
-            </div>
-            <h3 class="card-title">お出かけ・街巡り</h3>
-            <p class="card-text">
-              知らない街やカフェ、美味しいグルメを探して散策するのが好きです。気になる飲食店を見つけたら迷わず入ってみる行動派です。
+            <p class="copyright-notice">
+              ※本紙面のすべての記事・レイアウトはプログラミング学習のために独自制作されたものです。
             </p>
-            <div class="badge-cluster">
-              <span class="mini-badge">#街歩き</span>
-              <span class="mini-badge">#カフェ巡り</span>
-              <span class="mini-badge">#グルメ探訪</span>
-            </div>
-          </div>
-
-          <!-- 趣味カード3 -->
-          <div class="interactive-card">
-            <div class="card-icon-wrapper">
-              <span class="card-num">03</span>
-            </div>
-            <h3 class="card-title">映画鑑賞</h3>
-            <p class="card-text">
-              特に「マーベル（MCU）」シリーズや「スター・ウォーズ」などの大迫力なSF・アクション作品が好きで、緻密な世界観を楽しんでいます。
-            </p>
-            <div class="badge-cluster">
-              <span class="mini-badge">#MCU / MARVEL</span>
-              <span class="mini-badge">#Star Wars</span>
-              <span class="mini-badge">#SFアクション</span>
-            </div>
           </div>
         </div>
-      </section>
-
-      <!-- 4. 成長タイムライン (Timeline) -->
-      <section id="timeline" class="section-block">
-        <div class="section-header">
-          <span class="section-tag">ROADMAP</span>
-          <h2 class="section-heading">経歴 &amp; 成長タイムライン</h2>
-        </div>
-
-        <div class="content-card">
-          <div class="timeline-container">
-            <!-- タイムライン項目 1 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2024年 4月</div>
-              <div class="timeline-body">
-                <h4>IT専門学校 入学</h4>
-                <p>
-                  プログラミングの世界に魅力を感じ、Web制作の基礎学習をスタート。
-                </p>
-              </div>
-            </div>
-
-            <!-- タイムライン項目 2 -->
-            <div class="timeline-item">
-              <div class="timeline-dot current"></div>
-              <div class="timeline-date">現在</div>
-              <div class="timeline-body">
-                <h4>HTML5 / CSS3 の実践習得 &amp; 作品公開</h4>
-                <p>
-                  授業「プログラミング基礎」でWeb制作の構造・レイアウト技術を習得中。自作WebサイトやWebゲームを制作・独自ドメインで公開。
-                </p>
-              </div>
-            </div>
-
-            <!-- タイムライン項目 3 -->
-            <div class="timeline-item">
-              <div class="timeline-dot future"></div>
-              <div class="timeline-date">NEXT</div>
-              <div class="timeline-body">
-                <h4>JavaScript &amp; Webアプリケーション開発</h4>
-                <p>
-                  動的なUIデザインやオリジナルWebアプリケーションのさらなる制作・発展に挑戦予定。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. Q&A セクション -->
-      <section class="section-block">
-        <div class="section-header">
-          <span class="section-tag">INTERVIEW</span>
-          <h2 class="section-heading">自己紹介 Q&amp;A</h2>
-        </div>
-
-        <div class="qa-grid">
-          <div class="qa-bubble">
-            <div class="qa-q-row">
-              <span class="qa-symbol q-symbol">Q</span>
-              <span class="qa-q-text">休日は何をして過ごすことが多い？</span>
-            </div>
-            <div class="qa-a-row">
-              <span class="qa-symbol a-symbol">A</span>
-              <span class="qa-a-text">
-                天気の良い日は自転車で少し遠くまで出かけてカフェに行ったり、家で映画を一気見してのんびり過ごします。
-              </span>
-            </div>
-          </div>
-
-          <div class="qa-bubble">
-            <div class="qa-q-row">
-              <span class="qa-symbol q-symbol">Q</span>
-              <span class="qa-q-text">一番好きな食べ物は？</span>
-            </div>
-            <div class="qa-a-row">
-              <span class="qa-symbol a-symbol">A</span>
-              <span class="qa-a-text">
-                ラーメン、ハンバーグ、そしてお出かけ先で見つけた美味しいご当地ご飯です。
-              </span>
-            </div>
-          </div>
-
-          <div class="qa-bubble">
-            <div class="qa-q-row">
-              <span class="qa-symbol q-symbol">Q</span>
-              <span class="qa-q-text">どんなWebサイトを作りたい？</span>
-            </div>
-            <div class="qa-a-row">
-              <span class="qa-symbol a-symbol">A</span>
-              <span class="qa-a-text">
-                シンプルで見やすく、誰にとっても使いやすいスマートなWebサイトを作れるようになりたいです。
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. 制作物・作品 (Works) -->
-      <section id="works" class="section-block">
-        <div class="section-header">
-          <span class="section-tag">PORTFOLIO</span>
-          <h2 class="section-heading">制作した作品 (Works)</h2>
-          <p class="section-subtext">
-            実際に制作・公開しているWebサイトやプロジェクトです。
-          </p>
-        </div>
-
-        <div class="works-grid">
-          <!-- 作品1: 赤団 豹牙HP -->
-          <article class="work-card">
-            <div class="work-banner banner-akadan">
-              <div class="work-badge">Web Site</div>
-              <span class="work-banner-title">AKADAN</span>
-            </div>
-            <div class="work-content">
-              <h3 class="work-title">赤団 豹牙 公式Webサイト</h3>
-              <p class="work-desc">
-                三幸学園フェスティバル（３フェス）赤団の公式Webサイトです。お知らせ一覧、演舞動画、競技案内、メンバー紹介（副団長として参加）など、充実したコンテンツをまとめた本格的なWebサイトです。
-              </p>
-              <div class="work-tags">
-                <span class="tag">#Webサイト</span>
-                <span class="tag">#三フェス</span>
-                <span class="tag">#赤団</span>
-                <span class="tag">#Vercel</span>
-              </div>
-              <div class="work-btn-group">
-                <a
-                  href="https://akadan.vercel.app/"
-                  target="_blank"
-                  rel="noopener"
-                  class="work-link-btn"
-                >
-                  サイトを見る
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 作品2: cyber-bait.com（ハッキングゲーム） -->
-          <article class="work-card">
-            <div class="work-banner banner-game">
-              <div class="work-badge">Web Game</div>
-              <span class="work-banner-title">CYBER BAIT</span>
-            </div>
-            <div class="work-content">
-              <h3 class="work-title">詐欺師を騙し返せ！エージェント・コード</h3>
-              <p class="work-desc">
-                悪質な詐欺師をハッキングして騙し返す、ブラウザで遊べる潜入捜査サスペンス・シミュレーションゲームです。独自ドメイン（cyber-bait.com）を取得し、本格的なUIとストーリー演出を実装して公開しています。
-              </p>
-              <div class="work-tags">
-                <span class="tag">#cyber-bait.com</span>
-                <span class="tag">#Webゲーム</span>
-                <span class="tag">#独自ドメイン</span>
-                <span class="tag">#JavaScript</span>
-                <span class="tag">#Vercel</span>
-              </div>
-              <div class="work-btn-group">
-                <a
-                  href="https://cyber-bait.com/"
-                  target="_blank"
-                  rel="noopener"
-                  class="work-link-btn"
-                >
-                  ゲームをプレイ (cyber-bait.com)
-                </a>
-                <a
-                  href="https://first-game-n0jnz8pcc-tepe3.vercel.app/"
-                  target="_blank"
-                  rel="noopener"
-                  class="work-link-sub-btn"
-                >
-                  開発版 (Vercel)
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <!-- フッター -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <p class="footer-copy">
-          &copy; 2026 Teppei Izumi. Built with 100% HTML5 &amp; CSS3.
-        </p>
-        <p class="footer-status">Designed for Programming Basics Course.</p>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
